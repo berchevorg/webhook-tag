@@ -1,3 +1,14 @@
+
+terraform {
+  backend "remote" {
+    organization = "berchevorg"
+
+    workspaces {
+      name = "webhook-tag"
+    }
+  }
+}
+
 resource "random_pet" "name" {
   length    = "3"
   separator = "-"
